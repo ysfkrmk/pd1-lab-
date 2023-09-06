@@ -1,8 +1,9 @@
 PD1 LAB 11
 ***********
+#include<stdio.h>
+
 int main() {
 int i=1,pn;
-pn=i*(3*i-1)/2;
 while(pn<100)
 {
     pn=i*(3*i-1)/2;
@@ -17,6 +18,7 @@ if(pn<100)
     return 0;
 }
 ********************************
+#include<stdio.h>
 
 int main()
 {
@@ -56,7 +58,6 @@ return 0;
 }
 
 **********************************************
-
 #include <stdio.h>
 
 int main() {
@@ -98,8 +99,8 @@ printf("ogrencilerin kilo ortalamasi: %d\n",toplamk/10);
 }
 
 ***************************************************
-
 #include <stdio.h>
+
 #define max 10
 
 int main() {
@@ -117,8 +118,8 @@ printf("dizilerinizin birlestirilmis hali: %s",s1);
 }
 
 ***************************************************
-
 #include <stdio.h>
+
 #define max 100
 
 int main() {
@@ -139,7 +140,6 @@ for(dizi[i];dizi[i]!='\0';i++)
 }
 
 ***************************************
-
 #include <stdio.h>
 #define max 100
 
@@ -166,7 +166,7 @@ for(dizi[i];dizi[i]!='\0';i++)
    }
   if(dizi[i]>=97 && dizi[i]<=122 ||dizi[i]>=65 && dizi[i]<=90)
   {
-      if(dizi[i]!=65 &&dizi[i]!=69 &&dizi[i]!=73 &&dizi[i]!=79 &&dizi[i]!=85)
+      if(dizi[i]!=65 &&dizi[i]!=69 &&dizi[i]!=73 &&dizi[i]!=79 &&dizi[i]!=85 &&dizi[i]!=97 &&dizi[i]!=101 &&dizi[i]!=105 &&dizi[i]!=111 &&dizi[i]!=117)
       {
           unsuz++;
       }
@@ -178,7 +178,140 @@ printf("rakam sayisi :%d\n",sayi);
 printf("space sayisi :%d\n",space);
   return 0;
 }
+****************************************
+#include <stdio.h>
+#include <string.h>
+#define MAX1 100
+#define MAX2 100
 
+int main() {
+    int n;
+    char string[MAX2][MAX1], temp[MAX1];
+
+    printf("Enter the number of strings: ");
+    scanf("%d", &n);
+
+    printf("Enter %d strings:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%s", string[i]);
+    }
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (strcmp(string[i], string[j]) > 0) {
+                strcpy(temp, string[i]);
+                strcpy(string[i], string[j]);
+                strcpy(string[j], temp);
+            }
+        }
+    }
+    printf("\nSorted strings in dictionary order:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%s\n", string[i]);
+    }
+
+    return 0;
+}
+****************************************************
+#include <stdio.h>
+
+int alan(int a)
+{
+    return a*a;
+}
+int main() {
+    int kenar,sonuc;
+    printf("lutfen karenin kenar uzunlugunu giriniz.\n");
+    scanf("%d",&kenar);
+    if(kenar<=0)
+    {
+        printf("lutfen gecerli bir uzunluk giriniz.\n");
+
+    }
+    else
+    {
+        sonuc=alan(kenar);
+        printf("karenin alani: %d",sonuc);
+    }
+
+    return 0;
+}
+**************************************************
+#include <stdio.h>
+
+int ort(int dz[],int boyut)
+{
+int toplam=0,j=0;
+for(j;j<boyut;j++)
+{
+    toplam+=dz[j];
+}
+    return toplam/5;
+}
+int main() {
+    int dizi[5],i,sonuc;
+    printf("lutfen 5 adet sayi giriniz.\n");
+    for(i=0;i<5;i++)
+    {
+        scanf("%d",&dizi[i]);
+    }
+    sonuc=ort(dizi,5);
+printf("ortalama: %d",sonuc);
+    return 0;
+}
+******************************
+#include <stdio.h>
+
+int tyc(int s)
+{
+    if(s%2==0)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int main() {
+    int sayi,snc;
+    printf("lutfen bir adet sayi giriniz.\n");
+    scanf("%d",&sayi);
+    snc=tyc(sayi);
+    if(snc==1)
+    {
+        printf("girdiginiz sayi cift sayidir.\n");
+    }
+    else{
+        printf("girdiginiz sayi tek sayidir.");
+    }
+    return 0;
+}
+****************************************
+#include <stdio.h>
+int kelime(char cumle[])
+{
+    int sayac=1;
+    int boy=strlen(cumle);
+    for(int i=0;i<boy;i++)
+    {
+        if(cumle[i]==' ')
+        {
+            sayac++;
+        }
+}
+return sayac;
+    }
+
+int main() {
+    char cumle[50];
+    int snc;
+    printf("lutfen bir adet cumle giriniz.\n");
+    gets(cumle);
+    snc=kelime(cumle);
+    printf("cumlede %d adet kelime vardir.",snc);
+    return 0;
+}
+*********************************
 
 
 
