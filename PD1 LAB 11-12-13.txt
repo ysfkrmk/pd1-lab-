@@ -1,0 +1,186 @@
+PD1 LAB 11
+***********
+int main() {
+int i=1,pn;
+pn=i*(3*i-1)/2;
+while(pn<100)
+{
+    pn=i*(3*i-1)/2;
+    i++;
+if(pn<100)
+{
+    printf("%d\n",pn);
+}
+
+}
+
+    return 0;
+}
+********************************
+
+int main()
+{
+    int toplam[2][2];
+    int i,j,m1[2][2];
+    int m2[2][2];
+printf("Ilk matrisi giriniz:\n");
+for(i=0;i<2;i++)
+{
+    for(j=0;j<2;j++)
+    {
+        scanf("%d",&m1[i][j]);
+    }
+}
+printf("Ikinci matrisi giriniz:\n");
+
+    for(i=0;i<2;i++)
+    {
+
+
+    for(j=0;j<2;j++)
+    {
+        scanf("%d",&m2[i][j]);
+    }
+}
+printf("toplam\n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            toplam[i][j]=m1[i][j]+m2[i][j];
+
+            printf("%d \n",toplam[i][j]);
+        }
+    }
+return 0;
+}
+
+**********************************************
+
+#include <stdio.h>
+
+int main() {
+    int ogr[10][2];
+    int toplamb=0,toplamk=0;
+    int i,j;
+    printf("lutfen ogrencilerin boylar degerini giriniz.\n");
+    for(i=0;i<10;i++)
+    {
+        j=0;
+        scanf("%d",&ogr[i][j]);
+        toplamb+=ogr[i][j];
+        if(ogr[i][j]<0)
+        {
+            printf("gecerli bir boy giriniz.");
+            return 0;
+        }
+    }
+
+    printf("lutfen ogrencilerin kilo degerlerini giriniz.\n");
+    for(i=0;i<10;i++)
+    {
+        j=1;
+        scanf("%d",&ogr[i][j]);
+        toplamk+=ogr[i][j];
+        if(ogr[i][j]<0)
+        {
+            printf("gecerli bir kilo giriniz.");
+            return 0;
+        }
+
+    }
+printf("ogrencilerin boy ortalamasi: %d\n",toplamb/10);
+printf("ogrencilerin kilo ortalamasi: %d\n",toplamk/10);
+
+
+
+    return 0;
+}
+
+***************************************************
+
+#include <stdio.h>
+#define max 10
+
+int main() {
+
+    char s1[max],s2[max];
+    printf("ilk dizinizi giriniz.\n");
+    gets(s1);
+    printf("1.dizi: %s\n",s1);
+    printf("ikinci dizinizi giriniz.\n");
+    gets(s2);
+    printf("2.dizi: %s\n",s2);
+    strcat(s1,s2);
+printf("dizilerinizin birlestirilmis hali: %s",s1);
+    return 0;
+}
+
+***************************************************
+
+#include <stdio.h>
+#define max 100
+
+int main() {
+    int i=0;
+    char dizi[max];
+    printf("lutfen dizinizi giriniz.\n");
+    gets(dizi);
+    printf("dizinizin harf disi karakterlerden arindirilmis hali.\n");
+for(dizi[i];dizi[i]!='\0';i++)
+{
+   if(dizi[i]>=65 && dizi[i]<=90 || dizi[i]>=97 &&dizi[i]<=122)
+   {
+       printf("%c",dizi[i]);
+   }
+}
+
+    return 0;
+}
+
+***************************************
+
+#include <stdio.h>
+#define max 100
+
+int main() {
+    int i=0;
+    int unlu=0,unsuz=0,sayi=0,space=0;
+    char dizi[max];
+    printf("lutfen dizinizi giriniz.\n");
+    gets(dizi);
+    printf("dizinizin icinde bulunan karakterler.\n");
+for(dizi[i];dizi[i]!='\0';i++)
+{
+   if(dizi[i]==65 ||dizi[i]==69 ||dizi[i]==73 ||dizi[i]==79 ||dizi[i]==85 ||dizi[i]==97 ||dizi[i]==101 ||dizi[i]==105 ||dizi[i]==111||dizi[i]==117)
+   {
+       unlu++;
+   }
+   if(dizi[i]<=57 && dizi[i]>=48)
+   {
+       sayi++;
+   }
+   if(dizi[i]==32)
+   {
+       space++;
+   }
+  if(dizi[i]>=97 && dizi[i]<=122 ||dizi[i]>=65 && dizi[i]<=90)
+  {
+      if(dizi[i]!=65 &&dizi[i]!=69 &&dizi[i]!=73 &&dizi[i]!=79 &&dizi[i]!=85)
+      {
+          unsuz++;
+      }
+  }
+}
+printf("unlu sayisi :%d\n",unlu);
+printf("unsuz sayisi :%d\n",unsuz);
+printf("rakam sayisi :%d\n",sayi);
+printf("space sayisi :%d\n",space);
+  return 0;
+}
+
+
+
+
+
+

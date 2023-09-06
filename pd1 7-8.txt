@@ -1,0 +1,314 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+ int x,y,sum;
+ printf("enter two digits:\n");
+ scanf("%d%d",&x,&y);
+sum=x+y;
+
+printf("%d + %d= %d ",x,y,sum);
+
+return 0;
+}
+**********************************
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+ int a,b,temp;
+ printf("enter two digits:\n");
+ scanf("%d%d",&a,&b);
+temp=a;
+a=b;
+b=temp;
+
+
+printf("%d %d ",a,b);
+
+return 0;
+}
+*********************************
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+ int mid,fin,avg;
+ double num;
+ printf("enter your school number:\n");
+ scanf("%lf",&num);
+printf("enter your mid and final exam result:\n");
+scanf("%d%d",&mid,&fin);
+avg=(mid*0.4)+(fin*0.6);
+if(avg>=50)
+{
+    printf ("student with %.0lf school number: Passed. ",num);
+
+}
+else
+{
+    printf ("student with %.0lf school number: Failed. ",num);
+}
+
+
+return 0;
+}
+**********************************
+
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14
+int main()
+{
+ int calculate;
+ float r;
+printf("please enter the radius of the circle:\n");
+scanf("%f",&r);
+printf("Press 1 for: Calculate the circumference.\nPress 2 for: Calculate the area. ");
+scanf("%d",&calculate);
+
+if(calculate==1)
+{
+    float circumference;
+    circumference=2*pi*r;
+    printf("Circumference of the circle: %f\n",circumference);
+}
+else if(calculate==2)
+{
+    float area;
+    area=pi*r*r;
+    printf("Area of the circle: %f\n",area);
+}
+else
+{
+    printf("You entered the wrong operation");
+}
+
+return 0;
+}
+
+********************************
+#include <stdio.h>
+
+int main() {
+    int amount;
+    printf("Enter the amount: ");
+    scanf("%d", &amount);
+
+    if (amount % 5 != 0) {
+        printf("Amount must be a multiple of 5\n");
+        return 0;
+    }
+
+    int b200 = amount / 200;
+    amount %= 200;
+    int b100 = amount / 100;
+    amount %= 100;
+    int b50 = amount / 50;
+    amount %= 50;
+    int b20 = amount / 20;
+    amount %= 20;
+    int b10 = amount / 10;
+    amount %= 10;
+    int b5 = amount / 5;
+
+    printf("Banknote counts:\n");
+    printf("200 TL: %d\n", b200);
+    printf("100 TL: %d\n", b100);
+    printf("50 TL: %d\n", b50);
+    printf("20 TL: %d\n", b20);
+    printf("10 TL: %d\n", b10);
+    printf("5 TL: %d\n", b5);
+
+    return 0;
+}
+**********************************
+Lab 8
+***********
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+ int x,y,sum;
+ printf("enter two digits:\n");
+ scanf("%d%d",&x,&y);
+sum=x+y;
+
+printf("%d + %d= %d ",x,y,sum);
+
+return 0;
+}
+***************************
+#include <stdio.h>
+#define pi 3.14
+int main() {
+float r,area;
+printf("Enter the raidus of the circle: "),
+scanf("%f",&r);
+area=pi*r*r;
+
+printf("Area of the circle is: %f",area);
+    return 0;
+}
+****************************
+#include <stdio.h>
+#define pi 3.14
+int main() {
+int N;
+printf("Enter a number: ");
+scanf("%d",&N);
+
+if(N%2==0)
+{
+    printf("This is an even number.");
+}
+else
+{
+    printf("This is an odd number.");
+}
+    return 0;
+}
+*****************************
+#include <stdio.h>
+#define pi 3.14
+int main() {
+int t;
+printf("Enter the temperature: ");
+scanf("%d",&t);
+
+if(t==0)
+{
+    printf("This temperature is at the Freezing Point. ");
+}
+else if(t<0)
+{
+    printf("This temperature is below the Freezing Point.");
+}
+else
+{
+    printf("This temperature is above the Freezing Point.");
+}
+    return 0;
+}
+****************************
+#include <stdio.h>
+#define pi 3.14
+int main() {
+int a,b,c;
+printf("Enter 3 digits:\n");
+scanf("%d %d %d",&a,&b,&c);
+
+if(a>b && a>c)
+{
+   printf("a is the largest number. ");
+}
+
+    else if(b>a && b>c)
+{
+   printf("b is the largest number. ");
+}
+else if(c>a && c>b)
+{
+   printf("c is the largest number. ");
+}
+else if(c==a && c>b)
+{
+   printf("c and a are the largest numbers. ");
+
+}
+else if(b==a && b>c)
+{
+   printf("b and a are the largest numbers. ");
+}
+else if(c==b && c>a)
+{
+   printf("c and b are the largest numbers. ");
+}
+else{
+    printf("All numbers are equal.");
+}
+    return 0;
+
+}
+***************************
+
+#include <stdio.h>
+
+int main() {
+int a,b,c;
+printf("Enter 3 digits:\n");
+scanf("%d %d %d",&a,&b,&c);
+
+if(a>b && a>c)
+{
+   printf("a is the largest number. ");
+}
+else if(b>a && b>c)
+{
+   printf("b is the largest number. ");
+}
+else if(c>a && c>b)
+{
+   printf("c is the largest number. ");
+}
+else if(c==a && c>b)
+{
+   printf("c and a are the largest numbers. ");
+}
+else if(b==a && b>c)
+{
+   printf("b and a are the largest numbers. ");
+}
+else if(c==b && c>a)
+{
+   printf("c and b are the largest numbers. ");
+}
+else
+{
+   printf("All numbers are equal.");
+}
+
+ return 0;
+
+}
+--------------------------------
+#include <stdio.h>
+
+
+
+int main() {
+
+    int x, y, z;
+
+    printf("uc adet sayi giriniz:\n");
+
+    scanf("%d%d%d", &x, &y, &z);
+
+
+
+    if (x == y && y == z) {
+
+        printf("tum sayilar esit.");
+
+    } else if (x >= y && x >= z) {
+
+        printf("en buyuk sayi: %d", x);
+
+    } else if (y >= x && y >= z) {
+
+        printf("en buyuk sayi: %d", y);
+
+    } else {
+
+        printf("en buyuk sayi: %d", z);
+
+    }
+
+
+
+    return 0;
+
+}
+
+
